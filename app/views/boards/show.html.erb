@@ -1,0 +1,65 @@
+<nav class="top-nav">
+<ul>
+
+  <li class="list-border"></li>
+  <li>
+    <a href="../blog_pages/home" class="nav-link">ホーム</a>
+  </li>
+  <li class="list-border"></li>
+  <li>
+    <a href="../blog_pages/diary" class="nav-link">日記</a>
+  </li>
+  <li class="list-border"></li>
+  <li>
+    <a href="/boards" class="nav-link active">チャット</a>
+  </li>
+  <li class="list-border"></li>
+  <div class="clear"></div>
+</ul>
+</nav>
+
+
+<div class="sub-header">
+  <div class="content">
+    <h1>掲示板（編集）</h1>
+  </div>
+</div>
+
+<div class="wrapper wrapper__bg">
+ 	<div class="container">
+    <%= link_to "一覧に戻る", boards_path %>
+    <hr>
+      <div class="board">
+	       <h1 class="board--name"><%= @board.title %></h1>
+      </div>
+
+        <%= link_to "タイトル変更/", edit_board_path(@board) %>
+        <%= link_to "削除する", board_path(@board), method: :delete, data: { confirm: "削除しますか？" } %>
+        <hr>
+        <div class="comments">
+
+
+	         <% @board.comments.each_with_index do |comment, index| %>
+		         <div class="comment">
+			            <div class="comment--heading">
+				                <%= index + 1 %>:
+                  			<%= comment.name %>:
+                  			<%= comment.created_at.strftime("%Y/%m/%d %H:%M:%S ") %>:
+                  			<%= link_to "削除する", board_comment_path(@board, comment), method: :delete, data: { confirm: "削除しますか？" } %> <br>
+			            </div>
+            			<div class="comment-body">
+            				<%= comment.content %>
+            			</div>
+		         </div>
+		       <% end %>
+        </div>
+        <hr>
+
+          <%= form_for @comment, url: board_comments_path(@board, @comment) do |f| %>
+          	名前: <%= f.text_field :name %> <br>
+          	コメント: <%= f.text_area :content %> <br>
+          	<%= f.submit %>
+          <% end %>
+
+  </div>
+</div>

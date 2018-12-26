@@ -1,0 +1,41 @@
+<nav class="top-nav">
+<ul>
+
+  <li class="list-border"></li>
+  <li>
+    <a href="blog_pages/home" class="nav-link">ホーム</a>
+  </li>
+  <li class="list-border"></li>
+  <li>
+    <a href="blog_pages/diary" class="nav-link">日記</a>
+  </li>
+  <li class="list-border"></li>
+  <li>
+    <a href="/boards" class="nav-link active">チャット</a>
+  </li>
+  <li class="list-border"></li>
+  <div class="clear"></div>
+</ul>
+</nav>
+
+
+<div class="sub-header">
+  <div class="content">
+    <h1>掲示板(一覧）</h1>
+  </div>
+</div>
+
+
+
+<div class="wrapper wrapper__bg">
+ 	<div class="container">
+     <h1>某掲示板クローン</h1>
+   	<%= link_to "スレッド新規作成", new_board_path %>
+   	<hr>
+       <div class="panel">
+     	<% @boards.each do |board| %>
+     	<%= link_to board.title, board_path(board) %> </br>
+     	<% end %>
+     </div>
+   </div>
+</div>

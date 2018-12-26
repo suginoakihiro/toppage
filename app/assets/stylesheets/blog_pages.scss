@@ -1,0 +1,195 @@
+// Place all the styles related to the BlogPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*header*/
+.top-head {
+	height: 300px;
+	width: 100%;
+	background: url(photo/sun-3726030_960_720.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.top-head h1 {
+	color: #fff;
+	font-size: 60px;
+	padding-top: 30px;
+	margin-left: 0;
+	text-shadow: 1px 2px 2px rgba(52,85,43,0.8);
+}
+
+
+
+
+
+
+/*navbar*/
+.top-nav {
+	background-image: -ms-linear-gradient(top, #856727  0%, #6A511F 100%);
+	background-image: -moz-linear-gradient(top, #856727 0%, #6A511F 100%);
+	background-image: -o-linear-gradient(top, #856727 0%, #6A511F 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #856727), color-stop(1, #6A511F));
+	background-image: -webkit-linear-gradient(top, #856727 0%, #6A511F 100%);
+	box-shadow: 0px -2px 3px rgba(52,85,43,0.8);
+}
+
+.top-nav ul {
+	margin: 0 auto;
+	width: 1500px;
+}
+
+.top-nav li {
+	float: left;
+}
+
+.top-nav .nav-link {
+	color: white;
+	display: block;
+	width: 160px;
+	font-size: 16px;
+	text-align: center;
+	padding: 18px 0px;
+	opacity: 0.5;
+}
+
+.top-nav .nav-link:hover {
+	opacity: 1;
+}
+
+
+.top-nav .nav-link.active {
+	opacity: 1;
+	background-image: -ms-linear-gradient(bottom, #856727 0%, #6A511F 100%);
+	background-image: -moz-linear-gradient(bottom, #856727 0%, #6A511F 100%);
+	background-image: -o-linear-gradient(bottom, #856727 0%, #6A511F 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #856727), color-stop(1, #6A511F));
+	background-image: -webkit-linear-gradient(bottom, #856727 0%, #6A511F 100%);
+	background-image: linear-gradient(to top, #856727 0%, #6A511F 100%);
+}
+
+
+.top-nav li.list-border {
+	width: 2px;
+	background-color: rgba(49,25,0,0.7);
+	display: block;
+	height: 60px;
+	border-right: 1px solid #fff;
+	opacity: 0.5;
+}
+
+
+
+
+.main-content {
+	background-color: #f4f9ea;
+	padding-top: 30px;
+	padding-left: 100px;
+}
+
+.box {
+	background-color: #fff;
+	box-shadow: 0px 1px 3px rgba(34,50,24,0.6);   /*boxに影ができた*/
+	margin-bottom: 20px;
+}
+
+.title-back {
+	background-image: -ms-linear-gradient(top, #EDCA2F 0%, #EDCA2F 50%, #DDBE34 50.1%, #DDBE34 100%);
+	background-image: -moz-linear-gradient(top, #EDCA2F 0%, #EDCA2F 50%, #DDBE34 50.1%, #DDBE34 100%);
+	background-image: -o-linear-gradient(top, #EDCA2F 0%, #EDCA2F 50%, #DDBE34 50.1%, #DDBE34 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDCA2F), color-stop(0.5, #EDCA2F), color-stop(0.501, #DDBE34), color-stop(1, #DDBE34));
+	background-image: -webkit-linear-gradient(top, #EDCA2F 0%, #EDCA2F 50%, #DDBE34 50.1%, #DDBE34 100%);
+	background-image: linear-gradient(to bottom, #EDCA2F 0%, #EDCA2F 50%, #DDBE34 50.1%, #DDBE34 100%);
+}
+
+.title-back .title {
+	color: #fff;
+	font-size: 15px;
+	padding: 6px 17px;
+}
+
+.box-content {
+	padding: 20px 17px;
+}
+
+/*service icon部分*/
+
+.box-content ul li .date {
+	color: #999;
+}
+
+.box-content ul li .tag {
+	background-color: #90bc35;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 6px;
+	font-size: 12px;
+	margin: 0px 10px;
+}
+
+.box-content ul li {
+	margin-bottom: 15px;
+}
+
+.box-large {
+	width: 1000px;
+	height: 300px;
+	overflow: scroll;  /*はみ出し部分scrollにできる*/
+}
+
+.box-small {
+	width: 475px;
+	margin-right: 50px;
+	height: 350px;
+	float: left;
+	overflow: scroll;
+
+}
+.box-small2 {
+	width: 475px;
+	height: 350px;
+	margin-right: 50px;
+	float: left;
+}
+
+.box-small2.service {
+	margin-right: 0px;
+}
+
+.main-content .right-content {
+	float: left;
+	width: 300px;
+        margin-left: 150px;
+	height: 670px;
+}
+.main-content .right-content img {
+	width: 80%;
+	border: 5px solid #EDCA2F;
+	box-shadow: 0px 1px 3px rgba(34,50,24,0.6);
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+.main-content .left-content {
+	float: left;
+	width: 1000px;
+}
+
+
+/*footer*/
+#footer {
+	height: 150px;
+	width: 100%;
+	position: fixed;
+	margin-top: 30px;
+	padding-top: 15px;
+	background-color: #e3ead8;
+	box-shadow: 0px 2px 5px rgba(34,50,24,0.1) inset;   /*inset optionで内側に影*/
+}
+
+#footer .footer-info {
+	color: #777;
+	padding: 5px 60px;
+}
